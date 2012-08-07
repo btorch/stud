@@ -1,6 +1,27 @@
-stud (0.3~0.20111212) unstable; urgency=low
+stud (0.3.1-1rax~precise) precise; urgency=low
 
-  * Initial release.
+  * This is a in-house compiled version of stud using the master branch 
+    that had the last commit 84797cc9604c7360868709f9bfb1ee29e7e5ad09 
 
- -- Charlie Root <root@interseek.com>  Mon, 12 Dec 2011 13:24:18 +0100
+ -- Marcelo Martins <btorch@gmail.com>  Thu, 19 Jul 2012 21:30:05 +0000
 
+stud (0.3-1ubuntu2) precise; urgency=low
+
+  * Disable non-portable local locking functions (using x86 assembly).
+    By doing this, it will use the more portable pthread locking. Fixes
+    FTBFS on non-x86.
+
+ -- Ben Collins <bcollins@ubuntu.com>  Mon, 23 Jan 2012 05:11:05 +0000
+
+stud (0.3-1ubuntu1) precise; urgency=low
+
+  * debian/patches/binutils-gold.patch: fix FTBFS binutils with ld
+    as-needed. (LP: #913640)
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Mon, 09 Jan 2012 17:38:14 +0700
+
+stud (0.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #636072)
+
+ -- Vincent Bernat <bernat@debian.org>  Fri, 09 Dec 2011 19:53:41 +0100
