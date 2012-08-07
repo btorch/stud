@@ -1,15 +1,15 @@
 #!/usr/bin/make -f
 
 # Uncomment this to turn on verbose mode.
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 override_dh_auto_clean:
 	#rm -rf ebtree
-	make clean; cd ebtree; make clean ; cd ../
+	make clean; 
 
 override_dh_auto_configure:
-	#if [ -f ebtree-6.0.8.tar.gz ]; then wget http://1wt.eu/tools/ebtree/ebtree-6.0.8.tar.gz; fi
-	#if [ -f ebtree-6.0.8.tar.gz ]; then tar -zxpf ebtree-6.0.8.tar.gz; mv ebtree-6.0.8 ebtree; fi
+	if [ ! -e ebtree-6.0.8.tar.gz ]; then wget -O ebtree-6.0.8.tar.gz http://1wt.eu/tools/ebtree/ebtree-6.0.8.tar.gz ; fi ;
+	if [ -e ebtree-6.0.8.tar.gz ]; then tar -zxpf ebtree-6.0.8.tar.gz ; mv ebtree-6.0.8 ebtree ; fi ;
 
 override_dh_auto_build:
 	make USE_SHARED_CACHE=1 PREFIX=/usr

@@ -1,4 +1,4 @@
-stud (0.3.1-1rax~precise) precise; urgency=low
+stud (0.3.1-2rax~precise) precise; urgency=low
 
   * This is a in-house compiled version of stud using the master branch 
     that had the last commit 84797cc9604c7360868709f9bfb1ee29e7e5ad09 
