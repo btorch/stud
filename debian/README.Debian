@@ -1,0 +1,11 @@
+stud does not have any configuration file. You can setup some options
+in "/etc/default/stud" then configure any number of stud instances by
+creating configuration files in /etc/stud. Those files should be
+suffixed by ".conf" and must define two variables: OPTIONS and CERT.
+
+For example:
+
+OPTIONS="-f *,443 -b 127.0.0.1,8445"
+CERT="/etc/ssl/stud.pem"
+
+ -- Vincent Bernat <bernat@debian.org>, Fri, 23 Sep 2011 15:01:22 +0200
